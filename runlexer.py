@@ -114,19 +114,12 @@ def runlexer(lexer, fin, fout):
             i += 1
 
         for j in range(1, len(data) - 1):
-            # if data[j][3] == '\\' and  data[j][4] == 'n':
-            #     data[j] = [data[j][0], data[j][3] + data[j][4], data[j][7]]
-            #     continue
             data[j] = list(data[j].split(sep=','))
             data[j][1] = data[j][1][1:len(data[j][1]) - 1:1]
 
         f1 = f1[i + 1::]
-        # print(data)
         dfas.append(DFA(data, name))
         NUMBER_OF_DFAS += 1
-
-    # print(dfas[1].alphabet)
-    # print(NUMBER_OF_DFAS)
 
     f = open(fin, "r").read()
     solve(dfas, f, NUMBER_OF_DFAS, fout)
