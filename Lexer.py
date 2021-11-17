@@ -1,5 +1,5 @@
 from runlexer import runlexer
 
-runlexer("T1.11/T1.11.lex", "T1.11/input/T1.11.6.in", "output.txt")
+runlexer("T1.5/T1.5.lex", "T1.5/input/T1.5.1.in", "output.txt")
 
 
